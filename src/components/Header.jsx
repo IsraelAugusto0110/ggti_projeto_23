@@ -1,7 +1,7 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import Navbar from "./Navbar";
-import image from "../assets/images/creta.jpg";
+import imgBg from "../assets/images/img_bg02.jpg";
 
 const Header = () => {
   return (
@@ -12,18 +12,12 @@ const Header = () => {
         flexDirection="column"
         sx={{
           alignItems: "center",
-          backgroundImage: `url(${image})`,
+          backgroundImage: `url(${imgBg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "600px",
+          height: "500px",
         }}
-      >
-        <Grid item sx={{ backgroundColor: "yellow", padding: 2 }} xs={6}>
-          <Typography color="white" fontWeight="bold" variant="h4">
-            Discover new places
-          </Typography>
-        </Grid>
-      </Grid>
+      ></Grid>
     </>
   );
 };

@@ -18,24 +18,24 @@ const linkStyle = {
 const Navbar = () => {
   return (
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: "black", opacity: 0.25 }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "black", opacity: 0.45 }}>
         <Toolbar>
           <Grid container>
             <Grid item xs={2}>
-              <Typography>
-                <Explore />
+              <Typography color="white">
+                <Explore fontSize="large" />
               </Typography>
             </Grid>
             <Grid item xs={5}>
               <Stack direction="row">
                 <Button>
                   <Link to="/" style={linkStyle}>
-                    HOME
+                    <Typography color="white">HOME</Typography>
                   </Link>
                 </Button>
                 <Button>
                   <Link to="/destinos" style={linkStyle}>
-                    DESTINOS
+                    <Typography color="white">DESTINOS</Typography>
                   </Link>
                 </Button>
               </Stack>
