@@ -18,10 +18,7 @@ const linkStyle = {
 const Navbar = () => {
   return (
     <>
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: "black", opacity: 0.25 }}
-      >
+      <AppBar position="fixed" sx={{ backgroundColor: "black", opacity: 0.25 }}>
         <Toolbar>
           <Grid container>
             <Grid item xs={2}>
