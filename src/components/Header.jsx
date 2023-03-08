@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import Navbar from "./Navbar";
 import imgBg from "../assets/images/img_bg02.jpg";
@@ -9,7 +9,7 @@ const Header = () => {
       <Navbar />
       <Grid
         container
-        flexDirection="column"
+        flexDirection="column-reverse"
         sx={{
           alignItems: "center",
           backgroundImage: `url(${imgBg})`,
@@ -17,7 +17,13 @@ const Header = () => {
           backgroundSize: "cover",
           height: "500px",
         }}
-      ></Grid>
+      >
+        <Grid item sx={{ padding: 2 }}>
+          <Typography variant="h4" color="white">
+            Descubra novos lugares
+          </Typography>
+        </Grid>
+      </Grid>
     </>
   );
 };
