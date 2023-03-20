@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 
 const linkStyle = {
   textDecoration: "none",
-  color: "blue",
 };
 
 function Destino() {
@@ -47,7 +46,9 @@ function Destino() {
           <CardActions>
             <Button size="medium" variant="text">
               <Link to="/detalhe" style={linkStyle}>
-                Saiba mais
+                <Typography variant="body2" fontWeight="bold" color="skyblue">
+                  Saiba mais
+                </Typography>
               </Link>
             </Button>
           </CardActions>
