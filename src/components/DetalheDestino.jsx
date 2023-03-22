@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, ImageList, ImageListItem, Typography } from "@mui/material";
 import React from "react";
 
 function DetalheDestino() {
@@ -24,7 +24,22 @@ function DetalheDestino() {
             width: "30%",
             padding: 2,
           }}
-        ></Grid>
+        >
+          <Box sx={{ width: 500, height: 450, overflowY: "scroll" }}>
+            <ImageList variant="masonry" cols={2} gap={8}>
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </Box>
+        </Grid>
         <Grid
           container
           item
@@ -63,3 +78,22 @@ function DetalheDestino() {
 }
 
 export default DetalheDestino;
+
+const itemData = [
+  {
+    img: require("../assets/images/athens01.jpg"),
+    title: "qualquer coisa",
+  },
+  {
+    img: require("../assets/images/crete01.jpg"),
+    title: "qualquer coisa",
+  },
+  {
+    img: require("../assets/images/crete02.jpg"),
+    title: "qualquer coisa",
+  },
+  {
+    img: require("../assets/images/florence01.jpg"),
+    title: "qualquer coisa",
+  },
+];

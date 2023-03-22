@@ -18,7 +18,7 @@ const locations = [
   {
     id: 1,
     nome: "Ilha de Creta - Grécia",
-    imageUrl: require("../assets/images/crete01.jpg"),
+    img: require("../assets/images/crete01.jpg"),
     title: "Island of Crete - Greece",
     locDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut magna in nulla pretium volutpat eu eu turpis.",
@@ -26,7 +26,7 @@ const locations = [
   {
     id: 2,
     nome: "Athenas - Grécia",
-    imageUrl: require("../assets/images/athens01.jpg"),
+    img: require("../assets/images/athens01.jpg"),
     title: "Athens - Greece",
     locDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut magna in nulla pretium volutpat eu eu turpis.",
@@ -34,7 +34,7 @@ const locations = [
   {
     id: 3,
     nome: "Florença - Italia",
-    imageUrl: require("../assets/images/florence01.jpg"),
+    img: require("../assets/images/florence01.jpg"),
     title: "Florence - Italy",
     locDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut magna in nulla pretium volutpat eu eu turpis.",
@@ -59,7 +59,7 @@ function Destino() {
           >
             <CardMedia
               sx={{ height: 250 }}
-              image={location.imageUrl}
+              image={location.img}
               title={location.title}
             />
             <CardContent>
