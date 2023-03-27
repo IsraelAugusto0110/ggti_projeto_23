@@ -32,7 +32,7 @@ function DetalheDestino() {
         >
           <Box sx={{ width: 500, height: 450, overflowY: "scroll" }}>
             <ImageList variant="masonry" cols={2} gap={8}>
-              {itemData.map((item) => (
+              {imagens.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -76,48 +76,30 @@ function DetalheDestino() {
             <Typography variant="body1" fontSize={20} textAlign="justify">
               Escolha um pacote:
             </Typography>
-            <Grid
-              container
-              item
-              sx={{
-                flexDirection: "row",
-                padding: 2,
-                justifyContent: "space-between",
-              }}
-            >
-              <Typography
-                marginRight={1}
-                variant="body1"
-                fontSize={20}
-                textAlign="justify"
+            {pacotes.map((pacote) => (
+              <Grid
+                key={pacote.id}
+                container
+                item
+                sx={{
+                  flexDirection: "row",
+                  padding: 2,
+                  justifyContent: "space-between",
+                }}
               >
-                Pacote Standard: A partir de 10 X $ 199,90
-              </Typography>
-              <Button variant="contained" fontWeight="bold" color="success">
-                Comprar
-              </Button>
-            </Grid>
-            <Grid
-              container
-              item
-              sx={{
-                flexDirection: "row",
-                padding: 2,
-                justifyContent: "space-between",
-              }}
-            >
-              <Typography
-                marginRight={1}
-                variant="body1"
-                fontSize={20}
-                textAlign="justify"
-              >
-                Pacote Vip: A partir de 10 X $ 399,90
-              </Typography>
-              <Button variant="contained" fontWeight="bold" color="success">
-                Comprar
-              </Button>
-            </Grid>
+                <Typography
+                  marginRight={1}
+                  variant="body1"
+                  fontSize={20}
+                  textAlign="justify"
+                >
+                  Pacote {pacote.nome}: A partir de 10 X $ {pacote.valor}
+                </Typography>
+                <Button variant="contained" fontWeight="bold" color="success">
+                  Comprar
+                </Button>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Grid>
@@ -127,7 +109,7 @@ function DetalheDestino() {
 
 export default DetalheDestino;
 
-const itemData = [
+const imagens = [
   {
     img: require("../assets/images/athens01.jpg"),
     title: "qualquer coisa",
@@ -144,4 +126,13 @@ const itemData = [
     img: require("../assets/images/florence01.jpg"),
     title: "qualquer coisa",
   },
+];
+
+const pacotes = [
+  {
+    id: 1,
+    nome: "Standard",
+    valor: "199,90",
+  },
+  { id: 2, nome: "Vip", valor: "399,90" },
 ];
