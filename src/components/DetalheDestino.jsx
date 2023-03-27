@@ -1,4 +1,11 @@
-import { Box, Grid, ImageList, ImageListItem, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  ImageList,
+  ImageListItem,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 function DetalheDestino() {
@@ -48,10 +55,7 @@ function DetalheDestino() {
             padding: 2,
           }}
         >
-          <Grid
-            item
-            sx={{ backgroundColor: "white", textAlign: "justify", padding: 1 }}
-          >
+          <Grid item sx={{ textAlign: "justify", padding: 1 }}>
             <Typography variant="h5" gutterBottom fontWeight="bold">
               Atenas - Grécia
             </Typography>
@@ -67,6 +71,53 @@ function DetalheDestino() {
               sit vero ipsa ea omnis galisum id fugiat necessitatibus aut velit
               dolorem ut asperiores assumenda.
             </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="body1" fontSize={20} textAlign="justify">
+              Escolha um pacote:
+            </Typography>
+            <Grid
+              container
+              item
+              sx={{
+                flexDirection: "row",
+                padding: 2,
+                justifyContent: "space-between",
+              }}
+            >
+              <Typography
+                marginRight={1}
+                variant="body1"
+                fontSize={20}
+                textAlign="justify"
+              >
+                Pacote Standard: A partir de 10 X $ 199,90
+              </Typography>
+              <Button variant="contained" fontWeight="bold" color="success">
+                Comprar
+              </Button>
+            </Grid>
+            <Grid
+              container
+              item
+              sx={{
+                flexDirection: "row",
+                padding: 2,
+                justifyContent: "space-between",
+              }}
+            >
+              <Typography
+                marginRight={1}
+                variant="body1"
+                fontSize={20}
+                textAlign="justify"
+              >
+                Pacote Vip: A partir de 10 X $ 399,90
+              </Typography>
+              <Button variant="contained" fontWeight="bold" color="success">
+                Comprar
+              </Button>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
