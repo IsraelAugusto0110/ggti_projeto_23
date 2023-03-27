@@ -7,7 +7,6 @@ function DetalheDestino() {
       <Grid
         container
         sx={{
-          backgroundColor: "red",
           padding: 2,
           marginTop: 2,
           justifyContent: "center",
@@ -18,7 +17,6 @@ function DetalheDestino() {
           container
           item
           sx={{
-            backgroundColor: "royalblue",
             maxHeighteight: 500,
             minHeight: 250,
             width: "30%",
@@ -44,7 +42,6 @@ function DetalheDestino() {
           container
           item
           sx={{
-            backgroundColor: "purple",
             maxHeighteight: 500,
             minHeight: 250,
             width: "30%",
