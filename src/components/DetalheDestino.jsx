@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { pacotes, imagens } from "./Modelos";
 
 function DetalheDestino() {
   return (
@@ -108,31 +109,3 @@ function DetalheDestino() {
 }
 
 export default DetalheDestino;
-
-const imagens = [
-  {
-    img: require("../assets/images/athens01.jpg"),
-    title: "qualquer coisa",
-  },
-  {
-    img: require("../assets/images/crete01.jpg"),
-    title: "qualquer coisa",
-  },
-  {
-    img: require("../assets/images/crete02.jpg"),
-    title: "qualquer coisa",
-  },
-  {
-    img: require("../assets/images/florence01.jpg"),
-    title: "qualquer coisa",
-  },
-];
-
-const pacotes = [
-  {
-    id: 1,
-    nome: "Standard",
-    valor: "199,90",
-  },
-  { id: 2, nome: "Vip", valor: "399,90" },
-];
